@@ -3,8 +3,10 @@
 
 import re
 import sys
+from pathlib import Path
 
-sys.path.insert(0, "/Users/nk/Desktop/Ecology/alipay-devtools/src")
+# 从脚本位置推导仓库根：写死绝对路径的话，项目一挪就废
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from alipay_devtools import discovery  # noqa: E402
 
 for pid, args in discovery._ps_lines():

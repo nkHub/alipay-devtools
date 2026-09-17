@@ -10,7 +10,8 @@ from pathlib import Path
 
 import websockets
 
-sys.path.insert(0, "/Users/nk/Desktop/Ecology/alipay-devtools/src")
+# 从脚本位置推导仓库根：写死绝对路径的话，项目一挪就废
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 SUPPORT = Path.home() / "Library/Application Support/小程序开发者工具"
 
