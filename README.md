@@ -25,7 +25,7 @@
 ## 安装
 
 ```bash
-cd /Users/nk/Desktop/Ecology/alipay-devtools
+cd ~/Desktop/Ecology/alipay-devtools
 uv sync
 ```
 
@@ -56,14 +56,17 @@ ALIPAY_PROJECT_PATH=/path/to/miniprogram uv run alipay-devtools --doctor
   "alipay-devtools": {
     "type": "stdio",
     "command": "uv",
-    "args": ["run", "--directory", "/Users/nk/Desktop/Ecology/alipay-devtools", "alipay-devtools"],
+    "args": ["run", "--directory", "~/Desktop/Ecology/alipay-devtools", "alipay-devtools"],
     "env": {
-      "ALIPAY_PROJECT_PATH": "/Users/nk/Desktop/project/bc-alipay-app",
+      "ALIPAY_PROJECT_PATH": "~/Desktop/project/bc-alipay-app",
       "ALIPAY_APP_ID": "2021004156616335"
     }
   }
 }
 ```
+
+> ⚠️ 上面示例里的 `~` 只为可读；**JSON 配置里的 `~` 不会像 shell 那样展开**，
+> 照抄时请换成绝对路径（如 `/home/you/...`、`C:\Users\you\...`）。命令行里用 `~` 则没问题。
 
 环境变量都可选：
 
