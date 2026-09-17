@@ -56,7 +56,7 @@ ALIPAY_PROJECT_PATH=/path/to/miniprogram uv run alipay-devtools --doctor
   "alipay-devtools": {
     "type": "stdio",
     "command": "uv",
-    "args": ["run", "--directory", "~/Desktop/Ecology/alipay-devtools", "alipay-devtools"],
+    "args": ["run", "--directory", "alipay-devtools项目地址", "alipay-devtools"],
     "env": {
       "ALIPAY_PROJECT_PATH": "~/Desktop/project/bc-alipay-app",
       "ALIPAY_APP_ID": "2021004156616335"
@@ -65,8 +65,9 @@ ALIPAY_PROJECT_PATH=/path/to/miniprogram uv run alipay-devtools --doctor
 }
 ```
 
-> ⚠️ 上面示例里的 `~` 只为可读；**JSON 配置里的 `~` 不会像 shell 那样展开**，
-> 照抄时请换成绝对路径（如 `/home/you/...`、`C:\Users\you\...`）。命令行里用 `~` 则没问题。
+> ⚠️ 示例里的「alipay-devtools项目地址」是**占位文本，请替换成你本机 clone 的绝对路径**
+> （如 `/home/you/projects/alipay-devtools`、`C:\Users\you\alipay-devtools`）。
+> **JSON 配置里的 `~` 不会像 shell 那样展开**，别直接写 `~` 进来。
 
 环境变量都可选：
 
