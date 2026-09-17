@@ -67,9 +67,9 @@ def test_scale() -> None:
 
 def test_build_argv() -> None:
     print("\n[minidev.build_argv]")
-    argv = minidev.build_argv("build", "/tmp/proj", app_id="2021004156616335")
+    argv = minidev.build_argv("build", "/tmp/proj", app_id="2021000000000000")
     check("build 带 project 与 app-id",
-          "-p" in argv and "/tmp/proj" in argv and "-a" in argv and "2021004156616335" in argv,
+          "-p" in argv and "/tmp/proj" in argv and "-a" in argv and "2021000000000000" in argv,
           str(argv))
     check("build 默认加 machine-output", "--machine-output" in argv, str(argv))
 
